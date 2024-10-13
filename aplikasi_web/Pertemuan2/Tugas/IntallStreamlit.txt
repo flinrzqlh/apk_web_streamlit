@@ -1,0 +1,283 @@
+
+F:\Software Programming\#ProgrammingWorks>cd Streamlit
+
+F:\Software Programming\#ProgrammingWorks\Streamlit>python -m venv testenv
+
+F:\Software Programming\#ProgrammingWorks\Streamlit>dir
+ Volume in drive F is New Volume
+ Volume Serial Number is D833-D84C
+
+ Directory of F:\Software Programming\#ProgrammingWorks\Streamlit
+
+19/08/2024  12:11    <DIR>          .
+19/08/2024  12:11    <DIR>          ..
+19/08/2024  12:11    <DIR>          testenv
+               0 File(s)              0 bytes
+               3 Dir(s)  128.293.007.360 bytes free
+
+F:\Software Programming\#ProgrammingWorks\Streamlit>cd testenv
+
+F:\Software Programming\#ProgrammingWorks\Streamlit\testenv>dir
+ Volume in drive F is New Volume
+ Volume Serial Number is D833-D84C
+
+ Directory of F:\Software Programming\#ProgrammingWorks\Streamlit\testenv
+
+19/08/2024  12:11    <DIR>          .
+19/08/2024  12:11    <DIR>          ..
+19/08/2024  12:11    <DIR>          Include
+19/08/2024  12:11    <DIR>          Lib
+19/08/2024  12:11               269 pyvenv.cfg
+19/08/2024  12:11    <DIR>          Scripts
+               1 File(s)            269 bytes
+               5 Dir(s)  128.293.007.360 bytes free
+
+F:\Software Programming\#ProgrammingWorks\Streamlit\testenv\Scripts>cd ..
+
+F:\Software Programming\#ProgrammingWorks\Streamlit\testenv>cd ..
+
+F:\Software Programming\#ProgrammingWorks\Streamlit>testenv\Scripts\activate
+
+(testenv) F:\Software Programming\#ProgrammingWorks\Streamlit>
+
+(testenv) F:\Software Programming\#ProgrammingWorks\Streamlit>pip install streamlit
+Collecting streamlit
+  Obtaining dependency information for streamlit from https://files.pythonhosted.org/packages/b0/68/cf905fd2db4a84dc9b46803512b9765a3e9a6dfaa378a67c8db910c44ab3/streamlit-1.37.1-py2.py3-none-any.whl.metadata
+  Downloading streamlit-1.37.1-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting altair<6,>=4.0 (from streamlit)
+  Obtaining dependency information for altair<6,>=4.0 from https://files.pythonhosted.org/packages/07/92/485d136f850e89e5dd0b60047b539453c50be3782308447a4951fe2dc6bd/altair-5.4.0-py3-none-any.whl.metadata
+  Downloading altair-5.4.0-py3-none-any.whl.metadata (9.4 kB)
+Collecting blinker<2,>=1.0.0 (from streamlit)
+  Obtaining dependency information for blinker<2,>=1.0.0 from https://files.pythonhosted.org/packages/bb/2a/10164ed1f31196a2f7f3799368a821765c62851ead0e630ab52b8e14b4d0/blinker-1.8.2-py3-none-any.whl.metadata
+  Downloading blinker-1.8.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting cachetools<6,>=4.0 (from streamlit)
+  Obtaining dependency information for cachetools<6,>=4.0 from https://files.pythonhosted.org/packages/a4/07/14f8ad37f2d12a5ce41206c21820d8cb6561b728e51fad4530dff0552a67/cachetools-5.5.0-py3-none-any.whl.metadata
+  Downloading cachetools-5.5.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting click<9,>=7.0 (from streamlit)
+  Obtaining dependency information for click<9,>=7.0 from https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl.metadata
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting numpy<3,>=1.20 (from streamlit)
+  Obtaining dependency information for numpy<3,>=1.20 from https://files.pythonhosted.org/packages/7b/5e/093592740805fe401ce49a627cc8a3f034dac62b34d68ab69db3c56bd662/numpy-2.1.0-cp311-cp311-win_amd64.whl.metadata
+  Downloading numpy-2.1.0-cp311-cp311-win_amd64.whl.metadata (59 kB)
+     ---------------------------------------- 59.7/59.7 kB 798.4 kB/s eta 0:00:00
+Collecting packaging<25,>=20 (from streamlit)
+  Obtaining dependency information for packaging<25,>=20 from https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl.metadata
+  Downloading packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+Collecting pandas<3,>=1.3.0 (from streamlit)
+  Obtaining dependency information for pandas<3,>=1.3.0 from https://files.pythonhosted.org/packages/ab/63/966db1321a0ad55df1d1fe51505d2cdae191b84c907974873817b0a6e849/pandas-2.2.2-cp311-cp311-win_amd64.whl.metadata
+  Downloading pandas-2.2.2-cp311-cp311-win_amd64.whl.metadata (19 kB)
+Collecting pillow<11,>=7.1.0 (from streamlit)
+  Obtaining dependency information for pillow<11,>=7.1.0 from https://files.pythonhosted.org/packages/c1/d0/5866318eec2b801cdb8c82abf190c8343d8a1cd8bf5a0c17444a6f268291/pillow-10.4.0-cp311-cp311-win_amd64.whl.metadata
+  Downloading pillow-10.4.0-cp311-cp311-win_amd64.whl.metadata (9.3 kB)
+Collecting protobuf<6,>=3.20 (from streamlit)
+  Obtaining dependency information for protobuf<6,>=3.20 from https://files.pythonhosted.org/packages/a4/30/cb5395acd5f65edc0dee77bdd134fe556c52fade2ad3ea9ac2676d01effe/protobuf-5.27.3-cp310-abi3-win_amd64.whl.metadata
+  Downloading protobuf-5.27.3-cp310-abi3-win_amd64.whl.metadata (592 bytes)
+Collecting pyarrow>=7.0 (from streamlit)
+  Obtaining dependency information for pyarrow>=7.0 from https://files.pythonhosted.org/packages/30/d1/63a7c248432c71c7d3ee803e706590a0b81ce1a8d2b2ae49677774b813bb/pyarrow-17.0.0-cp311-cp311-win_amd64.whl.metadata
+  Downloading pyarrow-17.0.0-cp311-cp311-win_amd64.whl.metadata (3.4 kB)
+Collecting requests<3,>=2.27 (from streamlit)
+  Obtaining dependency information for requests<3,>=2.27 from https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl.metadata
+  Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting rich<14,>=10.14.0 (from streamlit)
+  Obtaining dependency information for rich<14,>=10.14.0 from https://files.pythonhosted.org/packages/87/67/a37f6214d0e9fe57f6ae54b2956d550ca8365857f42a1ce0392bb21d9410/rich-13.7.1-py3-none-any.whl.metadata
+  Downloading rich-13.7.1-py3-none-any.whl.metadata (18 kB)
+Collecting tenacity<9,>=8.1.0 (from streamlit)
+  Obtaining dependency information for tenacity<9,>=8.1.0 from https://files.pythonhosted.org/packages/d2/3f/8ba87d9e287b9d385a02a7114ddcef61b26f86411e121c9003eb509a1773/tenacity-8.5.0-py3-none-any.whl.metadata
+  Downloading tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting toml<2,>=0.10.1 (from streamlit)
+  Obtaining dependency information for toml<2,>=0.10.1 from https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl.metadata
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting typing-extensions<5,>=4.3.0 (from streamlit)
+  Obtaining dependency information for typing-extensions<5,>=4.3.0 from https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl.metadata
+  Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit)
+  Obtaining dependency information for gitpython!=3.1.19,<4,>=3.0.7 from https://files.pythonhosted.org/packages/e9/bd/cc3a402a6439c15c3d4294333e13042b915bbeab54edc457c723931fed3f/GitPython-3.1.43-py3-none-any.whl.metadata
+  Downloading GitPython-3.1.43-py3-none-any.whl.metadata (13 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit)
+  Obtaining dependency information for pydeck<1,>=0.8.0b4 from https://files.pythonhosted.org/packages/ab/4c/b888e6cf58bd9db9c93f40d1c6be8283ff49d88919231afe93a6bcf61626/pydeck-0.9.1-py2.py3-none-any.whl.metadata
+  Downloading pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting tornado<7,>=6.0.3 (from streamlit)
+  Obtaining dependency information for tornado<7,>=6.0.3 from https://files.pythonhosted.org/packages/d9/2f/3f2f05e84a7aff787a96d5fb06821323feb370fe0baed4db6ea7b1088f32/tornado-6.4.1-cp38-abi3-win_amd64.whl.metadata
+  Downloading tornado-6.4.1-cp38-abi3-win_amd64.whl.metadata (2.6 kB)
+Collecting watchdog<5,>=2.1.5 (from streamlit)
+  Obtaining dependency information for watchdog<5,>=2.1.5 from https://files.pythonhosted.org/packages/99/2e/b69dfaae7a83ea64ce36538cc103a3065e12c447963797793d5c0a1d5130/watchdog-4.0.2-py3-none-win_amd64.whl.metadata
+  Downloading watchdog-4.0.2-py3-none-win_amd64.whl.metadata (38 kB)
+Collecting jinja2 (from altair<6,>=4.0->streamlit)
+  Obtaining dependency information for jinja2 from https://files.pythonhosted.org/packages/31/80/3a54838c3fb461f6fec263ebf3a3a41771bd05190238de3486aae8540c36/jinja2-3.1.4-py3-none-any.whl.metadata
+  Downloading jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting jsonschema>=3.0 (from altair<6,>=4.0->streamlit)
+  Obtaining dependency information for jsonschema>=3.0 from https://files.pythonhosted.org/packages/69/4a/4f9dbeb84e8850557c02365a0eee0649abe5eb1d84af92a25731c6c0f922/jsonschema-4.23.0-py3-none-any.whl.metadata
+  Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting narwhals>=1.1.0 (from altair<6,>=4.0->streamlit)
+  Obtaining dependency information for narwhals>=1.1.0 from https://files.pythonhosted.org/packages/17/02/4339cef0fd41566ec9829b6d38dae9db4e473e3f9b422af1cd56d4d7f4a7/narwhals-1.4.2-py3-none-any.whl.metadata
+  Downloading narwhals-1.4.2-py3-none-any.whl.metadata (5.5 kB)
+Collecting colorama (from click<9,>=7.0->streamlit)
+  Obtaining dependency information for colorama from https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl.metadata
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit)
+  Obtaining dependency information for gitdb<5,>=4.0.1 from https://files.pythonhosted.org/packages/fd/5b/8f0c4a5bb9fd491c277c21eff7ccae71b47d43c4446c9d0c6cff2fe8c2c4/gitdb-4.0.11-py3-none-any.whl.metadata
+  Downloading gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+Collecting python-dateutil>=2.8.2 (from pandas<3,>=1.3.0->streamlit)
+  Obtaining dependency information for python-dateutil>=2.8.2 from https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas<3,>=1.3.0->streamlit)
+  Obtaining dependency information for pytz>=2020.1 from https://files.pythonhosted.org/packages/9c/3d/a121f284241f08268b21359bd425f7d4825cffc5ac5cd0e1b3d82ffd2b10/pytz-2024.1-py2.py3-none-any.whl.metadata
+  Downloading pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas<3,>=1.3.0->streamlit)
+  Obtaining dependency information for tzdata>=2022.7 from https://files.pythonhosted.org/packages/65/58/f9c9e6be752e9fcb8b6a0ee9fb87e6e7a1f6bcab2cdc73f02bb7ba91ada0/tzdata-2024.1-py2.py3-none-any.whl.metadata
+  Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting charset-normalizer<4,>=2 (from requests<3,>=2.27->streamlit)
+  Obtaining dependency information for charset-normalizer<4,>=2 from https://files.pythonhosted.org/packages/57/ec/80c8d48ac8b1741d5b963797b7c0c869335619e13d4744ca2f67fc11c6fc/charset_normalizer-3.3.2-cp311-cp311-win_amd64.whl.metadata
+  Downloading charset_normalizer-3.3.2-cp311-cp311-win_amd64.whl.metadata (34 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.27->streamlit)
+  Obtaining dependency information for idna<4,>=2.5 from https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl.metadata
+  Downloading idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.27->streamlit)
+  Obtaining dependency information for urllib3<3,>=1.21.1 from https://files.pythonhosted.org/packages/ca/1c/89ffc63a9605b583d5df2be791a27bc1a42b7c32bab68d3c8f2f73a98cd4/urllib3-2.2.2-py3-none-any.whl.metadata
+  Downloading urllib3-2.2.2-py3-none-any.whl.metadata (6.4 kB)
+Collecting certifi>=2017.4.17 (from requests<3,>=2.27->streamlit)
+  Obtaining dependency information for certifi>=2017.4.17 from https://files.pythonhosted.org/packages/1c/d5/c84e1a17bf61d4df64ca866a1c9a913874b4e9bdc131ec689a0ad013fb36/certifi-2024.7.4-py3-none-any.whl.metadata
+  Downloading certifi-2024.7.4-py3-none-any.whl.metadata (2.2 kB)
+Collecting markdown-it-py>=2.2.0 (from rich<14,>=10.14.0->streamlit)
+  Obtaining dependency information for markdown-it-py>=2.2.0 from https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl.metadata
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich<14,>=10.14.0->streamlit)
+  Obtaining dependency information for pygments<3.0.0,>=2.13.0 from https://files.pythonhosted.org/packages/f7/3f/01c8b82017c199075f8f788d0d906b9ffbbc5a47dc9918a945e13d5a2bda/pygments-2.18.0-py3-none-any.whl.metadata
+  Downloading pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit)
+  Obtaining dependency information for smmap<6,>=3.0.1 from https://files.pythonhosted.org/packages/a7/a5/10f97f73544edcdef54409f1d839f6049a0d79df68adbc1ceb24d1aaca42/smmap-5.0.1-py3-none-any.whl.metadata
+  Downloading smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->altair<6,>=4.0->streamlit)
+  Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/b7/a2/c78a06a9ec6d04b3445a949615c4c7ed86a0b2eb68e44e7541b9d57067cc/MarkupSafe-2.1.5-cp311-cp311-win_amd64.whl.metadata
+  Downloading MarkupSafe-2.1.5-cp311-cp311-win_amd64.whl.metadata (3.1 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair<6,>=4.0->streamlit)
+  Obtaining dependency information for attrs>=22.2.0 from https://files.pythonhosted.org/packages/6a/21/5b6702a7f963e95456c0de2d495f67bf5fd62840ac655dc451586d23d39a/attrs-24.2.0-py3-none-any.whl.metadata
+  Downloading attrs-24.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair<6,>=4.0->streamlit)
+  Obtaining dependency information for jsonschema-specifications>=2023.03.6 from https://files.pythonhosted.org/packages/ee/07/44bd408781594c4d0a027666ef27fab1e441b109dc3b76b4f836f8fd04fe/jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata
+  Downloading jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair<6,>=4.0->streamlit)
+  Obtaining dependency information for referencing>=0.28.4 from https://files.pythonhosted.org/packages/b7/59/2056f61236782a2c86b33906c025d4f4a0b17be0161b63b70fd9e8775d36/referencing-0.35.1-py3-none-any.whl.metadata
+  Downloading referencing-0.35.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=3.0->altair<6,>=4.0->streamlit)
+  Obtaining dependency information for rpds-py>=0.7.1 from https://files.pythonhosted.org/packages/cc/ec/77d0674f9af4872919f3738018558dd9d37ad3f7ad792d062eadd4af7cba/rpds_py-0.20.0-cp311-none-win_amd64.whl.metadata
+  Downloading rpds_py-0.20.0-cp311-none-win_amd64.whl.metadata (4.2 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14,>=10.14.0->streamlit)
+  Obtaining dependency information for mdurl~=0.1 from https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl.metadata
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas<3,>=1.3.0->streamlit)
+  Obtaining dependency information for six>=1.5 from https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl.metadata
+  Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Downloading streamlit-1.37.1-py2.py3-none-any.whl (8.7 MB)
+   ---------------------------------------- 8.7/8.7 MB 10.3 MB/s eta 0:00:00
+Downloading altair-5.4.0-py3-none-any.whl (671 kB)
+   ---------------------------------------- 671.7/671.7 kB 10.5 MB/s eta 0:00:00
+Downloading blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Downloading cachetools-5.5.0-py3-none-any.whl (9.5 kB)
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ---------------------------------------- 97.9/97.9 kB 5.5 MB/s eta 0:00:00
+Downloading GitPython-3.1.43-py3-none-any.whl (207 kB)
+   ---------------------------------------- 207.3/207.3 kB 6.4 MB/s eta 0:00:00
+Downloading numpy-2.1.0-cp311-cp311-win_amd64.whl (12.9 MB)
+   ---------------------------------------- 12.9/12.9 MB 2.9 MB/s eta 0:00:00
+Downloading packaging-24.1-py3-none-any.whl (53 kB)
+   ---------------------------------------- 54.0/54.0 kB 2.9 MB/s eta 0:00:00
+Downloading pandas-2.2.2-cp311-cp311-win_amd64.whl (11.6 MB)
+   ---------------------------------------- 11.6/11.6 MB 4.9 MB/s eta 0:00:00
+Downloading pillow-10.4.0-cp311-cp311-win_amd64.whl (2.6 MB)
+   ---------------------------------------- 2.6/2.6 MB 6.0 MB/s eta 0:00:00
+Downloading protobuf-5.27.3-cp310-abi3-win_amd64.whl (426 kB)
+   ---------------------------------------- 426.9/426.9 kB 2.7 MB/s eta 0:00:00
+Downloading pyarrow-17.0.0-cp311-cp311-win_amd64.whl (25.2 MB)
+   ---------------------------------------- 25.2/25.2 MB 6.2 MB/s eta 0:00:00
+Downloading pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+   ---------------------------------------- 6.9/6.9 MB 7.6 MB/s eta 0:00:00
+Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+   ---------------------------------------- 64.9/64.9 kB 3.6 MB/s eta 0:00:00
+Downloading rich-13.7.1-py3-none-any.whl (240 kB)
+   ---------------------------------------- 240.7/240.7 kB 7.4 MB/s eta 0:00:00
+Downloading tenacity-8.5.0-py3-none-any.whl (28 kB)
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading tornado-6.4.1-cp38-abi3-win_amd64.whl (438 kB)
+   ---------------------------------------- 438.5/438.5 kB 13.8 MB/s eta 0:00:00
+Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Downloading watchdog-4.0.2-py3-none-win_amd64.whl (82 kB)
+   ---------------------------------------- 82.9/82.9 kB 4.5 MB/s eta 0:00:00
+Downloading certifi-2024.7.4-py3-none-any.whl (162 kB)
+   ---------------------------------------- 163.0/163.0 kB 10.2 MB/s eta 0:00:00
+Downloading charset_normalizer-3.3.2-cp311-cp311-win_amd64.whl (99 kB)
+   ---------------------------------------- 99.9/99.9 kB ? eta 0:00:00
+Downloading gitdb-4.0.11-py3-none-any.whl (62 kB)
+   ---------------------------------------- 62.7/62.7 kB 3.3 MB/s eta 0:00:00
+Downloading idna-3.7-py3-none-any.whl (66 kB)
+   ---------------------------------------- 66.8/66.8 kB 3.5 MB/s eta 0:00:00
+Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+   ---------------------------------------- 133.3/133.3 kB 7.7 MB/s eta 0:00:00
+Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+   ---------------------------------------- 88.5/88.5 kB 4.9 MB/s eta 0:00:00
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ---------------------------------------- 87.5/87.5 kB 4.8 MB/s eta 0:00:00
+Downloading narwhals-1.4.2-py3-none-any.whl (144 kB)
+   ---------------------------------------- 145.0/145.0 kB 9.0 MB/s eta 0:00:00
+Downloading pygments-2.18.0-py3-none-any.whl (1.2 MB)
+   ---------------------------------------- 1.2/1.2 MB 8.5 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ---------------------------------------- 229.9/229.9 kB 7.1 MB/s eta 0:00:00
+Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+   ---------------------------------------- 505.5/505.5 kB 7.9 MB/s eta 0:00:00
+Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+   ---------------------------------------- 345.4/345.4 kB 7.1 MB/s eta 0:00:00
+Downloading urllib3-2.2.2-py3-none-any.whl (121 kB)
+   ---------------------------------------- 121.4/121.4 kB ? eta 0:00:00
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading attrs-24.2.0-py3-none-any.whl (63 kB)
+   ---------------------------------------- 63.0/63.0 kB ? eta 0:00:00
+Downloading jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Downloading MarkupSafe-2.1.5-cp311-cp311-win_amd64.whl (17 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading referencing-0.35.1-py3-none-any.whl (26 kB)
+Downloading rpds_py-0.20.0-cp311-none-win_amd64.whl (213 kB)
+   ---------------------------------------- 213.6/213.6 kB 13.6 MB/s eta 0:00:00
+Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Downloading smmap-5.0.1-py3-none-any.whl (24 kB)
+Installing collected packages: pytz, watchdog, urllib3, tzdata, typing-extensions, tornado, toml, tenacity, smmap, six, rpds-py, pygments, protobuf, pillow, packaging, numpy, narwhals, mdurl, MarkupSafe, idna, colorama, charset-normalizer, certifi, cachetools, blinker, attrs, requests, referencing, python-dateutil, pyarrow, markdown-it-py, jinja2, gitdb, click, rich, pydeck, pandas, jsonschema-specifications, gitpython, jsonschema, altair, streamlit
+Successfully installed MarkupSafe-2.1.5 altair-5.4.0 attrs-24.2.0 blinker-1.8.2 cachetools-5.5.0 certifi-2024.7.4 charset-normalizer-3.3.2 click-8.1.7 colorama-0.4.6 gitdb-4.0.11 gitpython-3.1.43 idna-3.7 jinja2-3.1.4 jsonschema-4.23.0 jsonschema-specifications-2023.12.1 markdown-it-py-3.0.0 mdurl-0.1.2 narwhals-1.4.2 numpy-2.1.0 packaging-24.1 pandas-2.2.2 pillow-10.4.0 protobuf-5.27.3 pyarrow-17.0.0 pydeck-0.9.1 pygments-2.18.0 python-dateutil-2.9.0.post0 pytz-2024.1 referencing-0.35.1 requests-2.32.3 rich-13.7.1 rpds-py-0.20.0 six-1.16.0 smmap-5.0.1 streamlit-1.37.1 tenacity-8.5.0 toml-0.10.2 tornado-6.4.1 typing-extensions-4.12.2 tzdata-2024.1 urllib3-2.2.2 watchdog-4.0.2
+
+[notice] A new release of pip is available: 23.2.1 -> 24.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(testenv) F:\Software Programming\#ProgrammingWorks\Streamlit>streamlit hello
+
+      Welcome to Streamlit!
+
+      If you’d like to receive helpful onboarding emails, news, offers, promotions,
+      and the occasional swag, please enter your email address below. Otherwise,
+      leave this field blank.
+
+      Email:
+
+  You can find our privacy policy at https://streamlit.io/privacy-policy
+
+  Summary:
+  - This open source library collects usage statistics.
+  - We cannot see and do not store information contained inside Streamlit apps,
+    such as text, charts, images, etc.
+  - Telemetry data is stored in servers in the United States.
+  - If you'd like to opt out, add the following to %userprofile%/.streamlit/config.toml,
+    creating that file if necessary:
+
+    [browser]
+    gatherUsageStats = false
+
+
+  Welcome to Streamlit. Check out our demo in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.1.20.3:8501
+
+  Ready to create your own Python apps super quickly?
+  Head over to https://docs.streamlit.io
+
+  May you create awesome apps!
+
+
