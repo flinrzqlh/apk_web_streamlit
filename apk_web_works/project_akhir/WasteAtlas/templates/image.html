@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section>
+    <!-- Image Area -->
+    <div class="flex flex-col justify-center items-center py-10 gap-y-5 bg-[#E5E9E9] text-center">
+        <!-- Upload an Image -->
+        <div class="flex items-center gap-6 md:gap-20">
+            <!-- Button Take Photo -->
+            <a href="/photo">
+                <button class="bg-[#5CBBB4] rounded-xl px-3 py-2 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                    <img src="{{ url_for('static', filename='images/snapbtn.png') }}" alt="TakePhoto" class="w-12 h-12">
+                </button>
+            </a>
+            <!-- Upload an Image -->
+            <h1 class="text-3xl text-5xl font-bold">
+                <span class="text-[#5CBBB4]">Upload an </span> 
+                <span class="text-[#EF9292]">Image</span>
+            </h1>
+            <!-- Button Upload an Image -->
+            <a href="/image">
+                <button class="bg-[#EF9292] rounded-xl px-3 py-2 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                    <img src="{{ url_for('static', filename='images/uploadimagebtn.png') }}" alt="UploadImage" class="w-12 h-12">
+                </button>
+            </a>
+        </div>
+
+        <!-- Frame Photo Preview dan Upload -->    
+        <div class="flex flex-col items-center gap-4">
+            <!-- Upload Form -->
+            <form action="/image" method="post" enctype="multipart/form-data" class="flex flex-col items-center gap-4">
+                <div class="bg-[#D9D9D9] px-10 py-10 rounded-xl flex items-center justify-center mx-10">
+                    {% if filename %}
+                        <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded image" class="w-full h-full">
+                    {% else %}
+                        <input type="file" name="file" accept="image/*" class="bg-white p-2 rounded-md">
+                    {% endif %}
+                </div>
+                <!-- Button Area -->
+                <div class="flex flex-col gap-3">
+                    <div class="flex gap-10">
+                        <!-- Button Upload Photo -->
+                        <button type="submit" class="bg-[#5CBBB4] rounded-xl px-4 py-2 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                            <h1 class="text-2xl font-bold text-[#ffffff]">Upload Image</h1>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        
+            {% if filename %}
+            <!-- Delete Form -->
+            <form action="/delete" method="post">
+                <input type="hidden" name="filename" value="{{ filename }}">
+                <div class="flex gap-10">
+                    <button type="submit" class="bg-[#EF9292] rounded-xl px-4 py-2 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                        <h1 class="text-2xl font-bold text-[#ffffff]">Delete Image</h1>
+                    </button>
+                </div>
+            </form>
+            {% endif %}
+        
+            {% if message %}
+            <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 mb-4">
+                {{ message }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Prediction Area -->
+    <div class="flex flex-col justify-center items-center py-10 gap-y-5 bg-[#5CBBB4] text-center">
+        <!-- Title (Prediction Results) -->
+        <h1 class="text-5xl mb-5 font-bold text-[#E5E9E9]">Prediction Results</h1>
+        <!-- What Waste Type -->
+        <h1 class="text-2xl font-medium text-[#E5E9E9]">The image you uploaded was an image of a ...</h1>
+
+        {% if waste_type %}
+
+        <!-- Waste Type Label -->
+        <div class="rounded-lg px-3 py-3 bg-[#E5E9E9] mb-5">
+            <h1 class="text-3xl font-bold text-[#E5E9E9]">
+                <span class="text-[#5CBBB4]">{{ waste_type.title() }} </span>
+                <span class="text-[#EF9292]">Waste!</span>
+            </h1>
+        </div>
+
+        <!-- What Accuracy ... -->
+        <h1 class="text-2xl font-medium text-[#E5E9E9] text-center">Our model predicted the type of this waste with an Accuracy Percentage of ....</h1>
+        
+        <!-- Accuracy Label -->
+        <div class="rounded-lg px-3 py-3 bg-[#E5E9E9] mb-10">
+            <h1 class="text-3xl font-bold text-[#E5E9E9]">
+                <span class="text-[#5CBBB4]">{{ confidence }}</span><span class="text-[#EF9292]">%</span>
+            </h1>
+        </div>
+
+        <!-- Learn More Button -->
+        <a href="/{{ waste_type }}">
+            <button class="bg-[#FFA7A7] rounded-xl px-6 py-3 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                <h1 class="text-3xl font-bold text-[#ffffff]">Learn More About This Waste</h1>
+            </button>
+        </a>
+
+        {% else %}
+
+        <!-- Waste Type Label -->
+        <div class="rounded-lg px-3 py-3 bg-[#E5E9E9]">
+            <h1 class="text-3xl font-bold text-[#E5E9E9]">
+                <span class="text-[#5CBBB4]">Please Upload an </span>
+                <span class="text-[#EF9292]">Image of a Waste!</span>
+            </h1>
+        </div>
+
+        {% endif %}
+    </div>
+
+</section>
+
+{% endblock %}

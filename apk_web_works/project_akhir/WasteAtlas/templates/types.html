@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Take a Photo or Upload an Image -->
+<section>
+    <!-- Waste Types Area -->
+    <div class="flex flex-col justify-center items-center py-10 bg-[#E5E9E9] text-center">
+        <!-- Title (Waste Types) -->
+        <h1 class="text-5xl font-bold mb-10">
+            <span class="text-[#5CBBB4]">Waste </span> 
+            <span class="text-[#EF9292]">Types</span>
+        </h1>
+        <div class="flex flex-wrap justify-center gap-12">
+            <!-- Battery Waste Type Card -->
+            <a href="/battery" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="rounded-lg bg-[#E5E9E9]">
+                    <img src="{{ url_for('static', filename='images/battery.png') }}" alt="batterytype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Battery Waste</h1>
+            </a>
+        
+            <!-- Biological Waste Type Card -->
+            <a href="/biological" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/biological.png') }}" alt="biologicaltype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Biological Waste</h1>
+            </a>
+        
+            <!-- Cardboard Waste Type Card -->
+            <a href="/cardboard" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/cardboard.png') }}" alt="cardboardtype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Cardboard Waste</h1>
+            </a>
+        
+            <!-- Clothes Waste Type Card -->
+            <a href="/clothes" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/clothes.png') }}" alt="clothestype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Clothes Waste</h1>
+            </a>
+        
+            <!-- Glass Waste Type Card -->
+            <a href="/glass" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/glass.png') }}" alt="glasstype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Glass Waste</h1>
+            </a>
+        
+            <!-- Metal Waste Type Card -->
+            <a href="/metal" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/metal.png') }}" alt="metaltype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Metal Waste</h1>
+            </a>
+        
+            <!-- Paper Waste Type Card -->
+            <a href="/paper" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/paper.png') }}" alt="papertype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Paper Waste</h1>
+            </a>
+        
+            <!-- Plastic Waste Type Card -->
+            <a href="/plastic" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/plastic.png') }}" alt="plastictype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Plastic Waste</h1>
+            </a>
+        
+            <!-- Shoes Waste Type Card -->
+            <a href="/shoes" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/shoes.png') }}" alt="shoestype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Shoes Waste</h1>
+            </a>
+        
+            <!-- Trash Waste Type Card -->
+            <a href="/trash" class="flex items-center bg-[#5CBBB4] rounded-lg px-3 py-3 w-[400px] gap-5 transform transition-all duration-300 hover:scale-110">
+                <div class="bg-[#E5E9E9] rounded-lg">
+                    <img src="{{ url_for('static', filename='images/trash.png') }}" alt="trashtype" class="w-[150px] h-[150px]">
+                </div>
+                <h1 class="text-2xl font-bold text-[#E5E9E9]">Trash Waste</h1>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

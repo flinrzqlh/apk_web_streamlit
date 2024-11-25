@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteAtlas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Georama', sans-serif;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="sticky z-50 top-0 flex justify-between items-center px-8 py-4 bg-[#5CBBB4]">
+        
+        <!-- Logo Section -->
+        <div class="text-2xl md:text-4xl font-bold bg-[#E5E9E9] rounded-md px-3 py-2 flex justify-center items-center">
+            <img src="{{ url_for('static', filename='images/LogoWasteAtlas.png') }}" alt="WasteAtlas" class="w-10 h-10 md:w-12 md:h-12 inline-block mr-1">
+            <span class="text-[#5CBBB4]">Waste</span><span class="text-[#EF9292]">Atlas</span>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex space-x-4">
+            <a href="/" class="p-2 rounded bg-[#E5E9E9] transform transition-all duration-300 hover:scale-110">
+                <img src="{{ url_for('static', filename='images/homebtn.png') }}" alt="Home" class="w-10 h-10 md:w-12 md:h-12">
+            </a>
+            <a href="/types" class="p-2 rounded bg-[#E5E9E9] transform transition-all duration-300 hover:scale-110">
+                <img src="{{ url_for('static', filename='images/searchbtn.png') }}" alt="Learn" class="w-10 h-10 md:w-12 md:h-12">
+            </a>
+            <a href="/photo" class="p-2 rounded bg-[#E5E9E9] transform transition-all duration-300 hover:scale-110">
+                <img src="{{ url_for('static', filename='images/snapbtnblue.png') }}" alt="Photo" class="w-10 h-10 md:w-12 md:h-12">
+            </a>
+            <a href="/image" class="p-2 rounded bg-[#E5E9E9] transform transition-all duration-300 hover:scale-110">
+                <img src="{{ url_for('static', filename='images/uploadimagebtnblue.png') }}" alt="Photo" class="w-10 h-10 md:w-12 md:h-12">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex flex-col items-center py-10 bg-[#E5E9E9]">
+        <!-- Logo Section -->
+        <div class="text-4xl font-bold flex justify-center items-center mb-6">
+            <img src="{{ url_for('static', filename='images/LogoWasteAtlas.png') }}" alt="WasteAtlas" class="w-12 h-12 inline-block mr-1">
+            <span class="text-[#5CBBB4]">Waste</span><span class="text-[#EF9292]">Atlas</span>
+        </div>
+    
+        <!-- Developer Section -->
+        <div class="text-center mb-8">
+            <h2 class="text-[#5CBBB4] text-lg md:text-xl font-bold mb-2">Developed By</h2>
+            <p class="text-[#EF9292] text-lg md:text-xl font-medium">Muhammad Efflin Rizqallah Limbong</p>
+            <p class="text-[#EF9292] text-lg md:text-xl font-medium">22537144007</p>
+        </div>
+    
+        <!-- Sources Section -->
+        <div class="text-center">
+            <h2 class="text-[#5CBBB4] text-lg md:text-xl font-bold mb-2">Sources</h2>
+            <div class="flex justify-center space-x-20">
+                <a href="https://github.com/flinrzqlh/apk_web_streamlit/tree/main/awworks/project_akhir/WasteAtlas" class="p-2 rounded-lg bg-white transform transition-all duration-300 hover:scale-110">
+                    <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="w-10 h-10 md:w-12 md:h-12">
+                </a>
+                <a href="https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2" class="p-2 rounded-lg bg-white transform transition-all duration-300 hover:scale-110">
+                    <img src="{{ url_for('static', filename='images/dataset.png') }}" alt="Dataset" class="w-10 h-10 md:w-12 md:h-12">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

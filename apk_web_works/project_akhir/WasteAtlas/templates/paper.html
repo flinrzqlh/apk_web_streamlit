@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Waste Type Description -->
+<section>
+
+    <!-- Waste Types Area -->
+    <div class="flex flex-col justify-center items-center py-12 gap-y-5 bg-[#E5E9E9]">
+        <!-- Title (Waste Type) -->
+        <h1 class="text-5xl font-bold">
+            <span class="text-[#5CBBB4]">Paper </span> 
+            <span class="text-[#EF9292]">Waste</span>
+        </h1>
+
+        <!-- Image of Waste Type -->
+        <div class="bg-[#D9D9D9] px-5 py-5 rounded-xl mb-10">
+            <img src="{{ url_for('static', filename='images/paper.png') }}" alt="paper" class="w-[300px] h-[300px]">
+        </div>
+
+        <!-- "What?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#5CBBB4] text-2xl font-bold mb-2 ml-6">What is it?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#5CBBB4] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed">
+                        Paper waste consists of discarded materials made from paper, including newspapers, magazines, office paper, cardboard, and tissue paper. 
+                        It is generated in large quantities in homes, offices, and industries. 
+                        While paper is biodegradable, the large-scale waste of paper, particularly in packaging and single-use products, contributes to deforestation and excessive landfill waste. 
+                        However, it is one of the most recycled materials globally, making up a significant portion of recyclable waste.
+                    </p>
+                </div>
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/questionmark.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+            </div>
+        </div>
+
+        <!-- "Impact?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#EF9292] text-2xl font-bold mb-2 mr-6 text-right">What is the Environmental Impact?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#EF9292] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/impact.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed text-right">
+                        Paper waste has a considerable environmental impact, especially when not recycled. 
+                        The production of paper involves cutting down trees, which contributes to deforestation and habitat loss. 
+                        In landfills, paper waste decomposes to release methane, a potent greenhouse gas. 
+                        Recycling paper reduces the demand for new raw materials, decreases energy use, and conserves water, 
+                        but improper disposal of paper waste can also lead to pollution when mixed with non-recyclables.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- "Dispose?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#5CBBB4] text-2xl font-bold mb-2 ml-6">Can it be Diposed?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#5CBBB4] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed">
+                        Paper waste is disposable and recyclable. It can be sorted into different categories, such as office paper, newspapers, and cardboard, for easy recycling. 
+                        While most paper can be recycled, some items like paper towels, napkins, and coated paper (e.g., glossy magazines) are not suitable for recycling. 
+                        Paper waste should be kept clean and dry before disposal, and many cities offer curbside pickup for paper recycling or have drop-off centers for larger quantities.
+                    </p>
+                </div>
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/dispose.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+            </div>
+        </div>
+
+        <!-- "Tips RRR?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+
+            <!-- Title -->
+            <h1 class="text-[#EF9292] text-2xl font-bold mb-2 mr-6 text-right">Any Tips on Reducing, Reusing, and Recycling?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#EF9292] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/recycle.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed text-right">
+                        To reduce paper waste, consider switching to digital alternatives like e-books and online documents. 
+                        Paper products can be reused for scrap notes or turned into new crafts. 
+                        When recycling paper, make sure it's free of food residue or contaminants like plastic, as this can ruin the recycling process. 
+                        Choose products with minimal packaging or items made from recycled paper to further minimize paper waste and support sustainable practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

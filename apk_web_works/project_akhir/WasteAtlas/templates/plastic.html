@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Waste Type Description -->
+<section>
+
+    <!-- Waste Types Area -->
+    <div class="flex flex-col justify-center items-center py-12 gap-y-5 bg-[#E5E9E9]">
+        <!-- Title (Waste Type) -->
+        <h1 class="text-5xl font-bold">
+            <span class="text-[#5CBBB4]">Plastic </span> 
+            <span class="text-[#EF9292]">Waste</span>
+        </h1>
+
+        <!-- Image of Waste Type -->
+        <div class="bg-[#D9D9D9] px-5 py-5 rounded-xl mb-10">
+            <img src="{{ url_for('static', filename='images/plastic.png') }}" alt="plastic" class="w-[300px] h-[300px]">
+        </div>
+
+        <!-- "What?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#5CBBB4] text-2xl font-bold mb-2 ml-6">What is it?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#5CBBB4] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed">
+                        Plastic waste refers to discarded plastic materials that are no longer useful, such as packaging, bottles, containers, bags, and single-use plastics. 
+                        These items are produced in large volumes and are pervasive in daily life due to their low cost and convenience. 
+                        However, once discarded, plastic waste can persist in the environment for hundreds of years, making it one of the most challenging waste streams to manage. 
+                        Plastic waste often ends up in landfills, oceans, and other ecosystems, where it contributes to pollution and harms wildlife.
+                    </p>
+                </div>
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/questionmark.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+            </div>
+        </div>
+
+        <!-- "Impact?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#EF9292] text-2xl font-bold mb-2 mr-6 text-right">What is the Environmental Impact?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#EF9292] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/impact.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed text-right">
+                        The environmental impact of plastic waste is significant. 
+                        Plastics take centuries to decompose, during which time they can leach harmful chemicals into the soil and water. 
+                        The majority of plastics are not biodegradable, and when they break down, they become microplastics that contaminate ecosystems. 
+                        Marine life, in particular, suffers from ingesting plastic, leading to injury, starvation, or death. 
+                        Plastic waste also contributes to greenhouse gas emissions during production and decomposition, further exacerbating climate change.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- "Dispose?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#5CBBB4] text-2xl font-bold mb-2 ml-6">Can it be Diposed?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#5CBBB4] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed">
+                        Plastic waste is disposable, but it is not always easy to manage. 
+                        While some plastics are recyclable, the majority are not, especially when contaminated with food or mixed with other materials. 
+                        Recycling plastics requires sorting and cleaning to be effective, and many types of plastic cannot be recycled, like certain food containers or plastic bags. 
+                        The most effective way to dispose of plastic waste is through dedicated recycling programs, 
+                        but it's important to note that even recycled plastics often end up in landfills or incinerators due to inefficiencies in the recycling process.
+                    </p>
+                </div>
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/dispose.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+            </div>
+        </div>
+
+        <!-- "Tips RRR?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+
+            <!-- Title -->
+            <h1 class="text-[#EF9292] text-2xl font-bold mb-2 mr-6 text-right">Any Tips on Reducing, Reusing, and Recycling?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#EF9292] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/recycle.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed text-right">
+                        To reduce plastic waste, prioritize reusable alternatives, such as cloth bags, metal or glass containers, and reusable straws. 
+                        Avoid single-use plastic products like bottled water and plastic utensils whenever possible. 
+                        Reuse plastic items before discarding them, and choose products made from recycled plastics. 
+                        When recycling, ensure plastics are clean and sorted properly according to local recycling guidelines. 
+                        Supporting legislation that bans harmful plastics and encourages the development of biodegradable alternatives can also help reduce plastic waste at a larger scale.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

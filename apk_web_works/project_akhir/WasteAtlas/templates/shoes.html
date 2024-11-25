@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Waste Type Description -->
+<section>
+
+    <!-- Waste Types Area -->
+    <div class="flex flex-col justify-center items-center py-12 gap-y-5 bg-[#E5E9E9]">
+        <!-- Title (Waste Type) -->
+        <h1 class="text-5xl font-bold">
+            <span class="text-[#5CBBB4]">Shoes </span> 
+            <span class="text-[#EF9292]">Waste</span>
+        </h1>
+
+        <!-- Image of Waste Type -->
+        <div class="bg-[#D9D9D9] px-5 py-5 rounded-xl mb-10">
+            <img src="{{ url_for('static', filename='images/shoes.png') }}" alt="shoes" class="w-[300px] h-[300px]">
+        </div>
+
+        <!-- "What?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#5CBBB4] text-2xl font-bold mb-2 ml-6">What is it?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#5CBBB4] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed">
+                        Shoes waste consists of discarded footwear that is no longer wearable or useful, including old shoes, boots, sandals, and sneakers. 
+                        Many shoes are made from a combination of materials like rubber, leather, fabric, and synthetic components, which make them challenging to recycle. 
+                        As the global shoe market continues to grow, so does the accumulation of shoes waste. While some shoes are donated or repurposed, 
+                        a large percentage of them end up in landfills where they take years to decompose due to their mixed materials and synthetic components.
+                    </p>
+                </div>
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/questionmark.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+            </div>
+        </div>
+
+        <!-- "Impact?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#EF9292] text-2xl font-bold mb-2 mr-6 text-right">What is the Environmental Impact?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#EF9292] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/impact.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed text-right">
+                        Shoes waste contributes significantly to landfill overflow and environmental degradation. 
+                        Most shoes contain non-biodegradable materials such as rubber soles and synthetic fabrics, which take decades to break down. 
+                        As shoes deteriorate in landfills, they release microplastics and toxic chemicals into the soil and water, negatively impacting ecosystems and wildlife. 
+                        The production of shoes also involves the use of energy and resources, further contributing to pollution and climate change. 
+                        Improper disposal and excessive consumption exacerbate the growing waste problem.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- "Dispose?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#5CBBB4] text-2xl font-bold mb-2 ml-6">Can it be Diposed?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#5CBBB4] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed">
+                        Shoes waste is considered disposable, but it should not be disposed of carelessly. 
+                        Many shoes can be repurposed or recycled if processed correctly. 
+                        Some recycling centers accept shoes, breaking them down into reusable materials such as rubber or fabric. 
+                        However, most shoes are not easily recyclable due to the mixture of materials. 
+                        Instead of throwing away old shoes, they can be donated if they are still wearable, or upcycled into new products. 
+                        For non-recyclable shoes, local landfills may be the only option, though reducing waste by choosing sustainable alternatives is a better approach.
+                    </p>
+                </div>
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/dispose.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+            </div>
+        </div>
+
+        <!-- "Tips RRR?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+
+            <!-- Title -->
+            <h1 class="text-[#EF9292] text-2xl font-bold mb-2 mr-6 text-right">Any Tips on Reducing, Reusing, and Recycling?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#EF9292] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/recycle.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed text-right">
+                        To reduce shoes waste, purchase high-quality, durable shoes that last longer and can be repaired instead of replaced. 
+                        Opt for brands that use sustainable materials and manufacturing practices. 
+                        Reuse shoes by donating them to organizations or giving them a second life as garden planters or craft materials. 
+                        If your shoes are beyond repair or reuse, check with local shoe recycling programs to see if they accept them for 
+                        repurposing into new products like playground surfaces or insulation materials. By choosing durable and eco-friendly options, 
+                        we can minimize the environmental footprint of shoes waste.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

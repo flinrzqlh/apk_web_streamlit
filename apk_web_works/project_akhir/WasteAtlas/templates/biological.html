@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Waste Type Description -->
+<section>
+
+    <!-- Waste Types Area -->
+    <div class="flex flex-col justify-center items-center py-12 gap-y-5 bg-[#E5E9E9]">
+        <!-- Title (Waste Type) -->
+        <h1 class="text-5xl font-bold">
+            <span class="text-[#5CBBB4]">Biological </span> 
+            <span class="text-[#EF9292]">Waste</span>
+        </h1>
+
+        <!-- Image of Waste Type -->
+        <div class="bg-[#D9D9D9] px-5 py-5 rounded-xl mb-10">
+            <img src="{{ url_for('static', filename='images/biological.png') }}" alt="biological" class="w-[300px] h-[300px]">
+        </div>
+
+        <!-- "What?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110 ">
+            <!-- Title -->
+            <h1 class="text-[#5CBBB4] text-2xl font-bold mb-2 ml-6">What is it?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#5CBBB4] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed">
+                        Biological waste, also known as biomedical or organic waste, includes materials derived from living organisms. 
+                        It encompasses food scraps, animal waste, and even byproducts from medical or research activities involving biological material. 
+                        This type of waste is biodegradable but can carry pathogens or hazardous substances if not managed properly, 
+                        posing risks to both health and the environment.
+                    </p>
+                </div>
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/questionmark.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+            </div>
+        </div>
+
+        <!-- "Impact?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#EF9292] text-2xl font-bold mb-2 mr-6 text-right">What is the Environmental Impact?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#EF9292] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/impact.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed text-right">
+                        Improper disposal of biological waste can lead to severe environmental consequences. 
+                        Decomposing organic matter releases greenhouse gases like methane, contributing to climate change. 
+                        Additionally, biomedical waste containing pathogens or chemicals can contaminate soil and water, 
+                        harming ecosystems and public health. Proper waste management helps mitigate these risks and promotes sustainability.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- "Dispose?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+            <!-- Title -->
+            <h1 class="text-[#5CBBB4] text-2xl font-bold mb-2 ml-6">Can it be Diposed?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#5CBBB4] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed">
+                        Biological waste is generally disposable but requires specific methods based on its type. 
+                        Organic waste like food scraps can be composted to enrich soil. 
+                        Hazardous biological waste from medical or research settings must undergo sterilization 
+                        and proper containment before disposal to prevent contamination and disease spread.
+                    </p>
+                </div>
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/dispose.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+            </div>
+        </div>
+
+        <!-- "Tips RRR?" Area -->
+        <div class="max-w-xl md:max-w-4xl w-full mx-auto mt-4 transform transition-all duration-300 hover:scale-110">
+
+            <!-- Title -->
+            <h1 class="text-[#EF9292] text-2xl font-bold mb-2 mr-6 text-right">Any Tips on Reducing, Reusing, and Recycling?</h1>
+            
+            <!-- TextBox -->
+            <div class="relative bg-[#EF9292] p-6 rounded-xl flex items-stretch gap-4">
+                
+                <!-- Question Mark Icon -->
+                <div class="bg-white p-4 rounded-lg flex items-center">
+                    <img src="{{ url_for('static', filename='images/recycle.png') }}" alt="battery" class="w-12 h-12">
+                </div>
+                
+                <!-- Text Content -->
+                <div class="flex-1">
+                    <p class="text-white text-md font-medium leading-relaxed text-right">
+                        To manage biological waste sustainably, start by reducing waste generation. 
+                        One way to do this is to plan meals in order to avoid food wastage. 
+                        Reuse waste creatively, such as turning biological waste into fertilizers. 
+                        Recycling methods include composting organic matter to produce nutrient-rich soil amendments. 
+                        Community initiatives like composting programs can further enhance waste recycling efforts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section>
+    <!-- Take a Photo Area -->
+    <div class="flex flex-col justify-center items-center py-10 gap-y-5 bg-[#E5E9E9] text-center">
+        <!-- Take a Photo -->
+        <div class="flex items-center gap-16 md:gap-28">
+            <!-- Button Take Photo -->
+            <a href="/photo">
+                <button class="bg-[#5CBBB4] rounded-xl px-3 py-2 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                    <img src="{{ url_for('static', filename='images/snapbtn.png') }}" alt="TakePhoto" class="w-12 h-12">
+                </button>
+            </a>
+
+            <!-- Take a Photo -->
+            <h1 class="text-3xl text-5xl font-bold">
+                <span class="text-[#5CBBB4]">Take a </span> 
+                <span class="text-[#EF9292]">Photo</span>
+            </h1>
+
+            <!-- Button Upload an Image -->
+            <a href="/image">
+                <button class="bg-[#EF9292] rounded-xl px-3 py-2 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                    <img src="{{ url_for('static', filename='images/uploadimagebtn.png') }}" alt="UploadImage" class="w-12 h-12">
+                </button>
+            </a>
+        </div>
+
+        <!-- Frame Photo Preview dan Upload -->    
+        <div class="flex flex-col items-center gap-4">
+            <!-- Camera and Preview -->
+            <div class="flex flex-col items-center gap-4">
+                <video id="camera" width="640" height="480" autoplay></video>
+                <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+                <!-- Button Take Photo -->
+                <div class="flex gap-10">
+                    <button id="capture-btn" type="button" class="bg-[#5CBBB4] rounded-xl px-4 py-2 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                        <h1 class="text-2xl font-bold text-[#ffffff]">Take Photo</h1>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prediction Area -->
+    <div class="flex flex-col justify-center items-center py-10 gap-y-5 bg-[#5CBBB4] text-center">
+        <!-- Title (Prediction Results) -->
+        <h1 class="text-5xl mb-5 font-bold text-[#E5E9E9]">Prediction Results</h1>
+        <!-- What Waste Type -->
+        <h1 class="text-2xl font-medium text-[#E5E9E9]">The photo you took was a photo of a ...</h1>
+
+        {% if waste_type %}
+        <!-- Waste Type Label -->
+        <div class="rounded-lg px-3 py-3 bg-[#E5E9E9] mb-5">
+            <h1 class="text-3xl font-bold text-[#E5E9E9]">
+                <span class="text-[#5CBBB4]">{{ waste_type.title() }} </span>
+                <span class="text-[#EF9292]">Waste!</span>
+            </h1>
+        </div>
+
+        <!-- What Accuracy ... -->
+        <h1 class="text-2xl font-medium text-[#E5E9E9] text-center">Our model predicted the type of this waste with an Accuracy Percentage of ....</h1>
+        
+        <!-- Accuracy Label -->
+        <div class="rounded-lg px-3 py-3 bg-[#E5E9E9] mb-10">
+            <h1 class="text-3xl font-bold text-[#E5E9E9]">
+                <span class="text-[#5CBBB4]">{{ confidence }}</span><span class="text-[#EF9292]">%</span>
+            </h1>
+        </div>
+
+        <!-- Learn More Button -->
+        <a href="/{{ waste_type }}">
+            <button class="bg-[#FFA7A7] rounded-xl px-6 py-3 flex justify-center items-center transform transition-all duration-300 hover:scale-110">
+                <h1 class="text-3xl font-bold text-[#ffffff]">Learn More About This Waste</h1>
+            </button>
+        </a>
+
+        {% else %}
+        <!-- Waste Type Label -->
+        <div class="rounded-lg px-3 py-3 bg-[#E5E9E9]">
+            <h1 class="text-3xl font-bold text-[#E5E9E9]">
+                <span class="text-[#5CBBB4]">Please Take a </span>
+                <span class="text-[#EF9292]">Photo of a Waste!</span>
+            </h1>
+        </div>
+        {% endif %}
+    </div>
+</div>
+</section>
+
+<script>
+    const video = document.getElementById('camera');
+    const canvas = document.getElementById('canvas');
+    const captureBtn = document.getElementById('capture-btn');
+
+    // Access the user's webcam
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+        })
+        .catch(err => {
+            console.error('Error accessing the camera: ', err);
+        });
+
+    // Capture the photo
+    captureBtn.addEventListener('click', () => {
+        const context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const dataURL = canvas.toDataURL('image/png');
+
+        // Send the captured image to the server
+        fetch('/capture', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ image: dataURL }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.reload();
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
+{% endblock %}

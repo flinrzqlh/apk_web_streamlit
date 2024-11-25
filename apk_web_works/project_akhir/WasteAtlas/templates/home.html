@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Welcome Area -->
+<section>
+    <div class="flex flex-col justify-center items-center py-40 gap-y-5 bg-[#E5E9E9] text-center">
+        <img src="{{ url_for('static', filename='images/LogoWasteAtlas.png') }}" alt="WasteAtlas" class="w-[300px] mx-auto transform transition-all duration-300 hover:scale-110">
+        <div class="text-center">
+            <h1 class="text-8xl font-bold"><span class="text-[#5CBBB4]">Waste</span><span class="text-[#EF9292]">Atlas</span></h1>
+            <p class="my-4 text-4xl font-bold"><span class="text-[#5CBBB4]">Snap, Sort, and Sustain</span> <span class="text-[#EF9292]">with Ease</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Area -->
+<section class="bg-[#5CBBB4] py-10 flex items-center">
+    <div class="container my-auto mx-auto px-4 py-16">
+        <div class="flex items-center justify-between gap-6">
+            <!-- Left side - Illustration -->
+            <div class="w-1/2">
+                <img src="{{ url_for('static', filename='images/aboutilus.png') }}" alt="WasteAtlas" class="w-[500px] max-w-full transform transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- Right side - Text Content -->
+            <div class="w-1/2 ">
+                <h1 class="text-3xl md:text-6xl font-bold mb-6 text-[#ffffff]">
+                    <span class="text-[#FFA7A7]">Snap </span>
+                    and 
+                    <span class="text-[#FFA7A7]">Sort </span>
+                    Your Waste to 
+                    <span class="text-[#FFA7A7]">Sustain </span>
+                    our Beloved Homeworld
+                </h1>
+                <p class="text-lg md:text-xl leading-relaxed text-white">
+                    With WasteAtlas, every small step makes a big impact! Snap a photo to instantly identify waste types, discover easy tips for recycling and reusing, and contribute to a cleaner, greener planet. Let's make sustainability a way of life!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Take a Photo Area -->
+<section class="bg-[#EF9292] py-10 flex items-center">
+    <div class="container my-auto mx-auto px-4 py-16">
+        <div class="flex items-center justify-between gap-6">
+            <!-- Left side - Text Content and Button -->
+            <div class="w-1/2 text-right flex flex-col items-end">
+                
+                <h1 class="text-3xl md:text-6xl font-bold mb-6 text-[#ffffff]">
+                    Take a 
+                    <span class="text-[#58DED4]">Photo </span>of  
+                    <span class="text-[#58DED4]">Your Waste</span>
+                    and Let Us Do the Rest
+                </h1>
+                
+                <p class="text-lg md:text-xl leading-relaxed text-white">
+                    Simply snap a photo of your waste and let WasteAtlas do it's job! Our AI-powered system will instantly identify the waste type and provide you with the description, environmental impact, dispose methods, and additional tips!
+                </p>
+                
+                <!-- Button to Try Photo Feature -->
+                <div class="flex mt-8">
+                    <a href="/photo" class="bg-[#54C7BE] text-white font-bold py-2 px-9 rounded-md text-2xl transform transition-all duration-300 hover:scale-110">
+                        Try Now!
+                    </a>
+                </div>
+
+            </div>
+            
+            <!-- Right side - Illustration -->
+            <div class="w-1/2 flex justify-end">
+                <img src="{{ url_for('static', filename='images/photoilus.png') }}" alt="WasteAtlas" class="w-[500px] max-w-full transform transition-all duration-300 hover:scale-110">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Waste Types Area -->
+<section class="bg-[#5CBBB4] py-10 flex items-center">
+    <div class="container my-auto mx-auto px-4 py-16">
+        <div class="flex items-center justify-between gap-6">
+            <!-- Left side - Illustration -->
+            <div class="w-1/2">
+                <img src="{{ url_for('static', filename='images/searchilus.png') }}" alt="WasteAtlas" class="w-[500px] max-w-full transform transition-all duration-300 hover:scale-110">
+            </div>
+            
+            <!-- Right side - Text Content -->
+            <div class="w-1/2 flex flex-col items-start">
+                <h1 class="text-3xl md:text-6xl font-bold mb-6 text-[#ffffff]">
+                    <span class="text-[#FFA7A7]">Learn More </span>
+                    About The Different 
+                    <span class="text-[#FFA7A7]">Waste Types</span>
+                </h1>
+                <p class="text-lg md:text-xl leading-relaxed text-white">
+                    Discover the world of waste! Explore detailed information about various waste categories, their environmental impact, and practical disposal methods. Learn sustainable practices to reduce, reuse, and recycle, contributing to a greener and healthier planet!
+                </p>
+                <!-- Button to Try Photo Feature -->
+                <div class="flex mt-8">
+                    <a href="/types" class="bg-[#FFA7A7] text-white font-bold py-2 px-9 rounded-md text-2xl transform transition-all duration-300 hover:scale-110">
+                        Learn Now!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
